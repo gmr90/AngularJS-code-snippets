@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>angular-1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body> 
+	<h1>Hello World !</h1>
+<div ng-app='' ng-init="myCol='lightblue'">
+	<p>My first expression is : {{5+5}} </p>
+	<input style="background-color:{{myCol}}" ng-model="myCol" value="{{myCol}}"
+</div>
+<!--AngularJS objects are like JavaScript objects: -->
+<!--Strings,objects, arrays, -->
+<div ng-app='' ng-init = "firstName='govardhan';lastName='gmr90' ; person={name:'code',task:'do it everyday'}; points=[2,6,7,8,]">
+	<p>The name is {{firstName+" "+lastName}}</p>
+	<p>{{person.name+" "+person.task}}</p>
+	<p>points array second element: {{points[2]}}</p>
+	<p>Ng-bind>> points[2]= <span ng-bind="points[2]"></span></p>
+	
+</div>
+
+</body>
+</html>
+
+

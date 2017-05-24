@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>angular-1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script  src="script.js"></script>
+</head>
+<body> 
+	<h1>Hello World !</h1>
+	<div ng-app="myApp" ng-controller="myCtrl" ng-init="firstName='maru'">
+		<p>
+			<input type="text" placeholder="enter the name" ng-model="name">
+		</p>
+		<p ng-bind ="name" ></p>
+		<p ng-bind="firstName"></p>
+		<h1>Angular Expressions </h1>
+		<p>My first expression : {{5+5}}</p>
+		<p>Name : {{ name }}</p>
+
+		<h2>Using controller</h2>
+		First Name : <input type="text" ng-model="firstName">
+		Last Name : <input type="text" ng-model="lastName">
+		<br>
+		Full Name :{{ firstName +" "+lastName}}
+	</div>
+</div>
+
+
+</body>
+</html>
+
+
