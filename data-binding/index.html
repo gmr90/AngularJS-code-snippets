@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>angular-1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script  src="script.js"></script>
+</head>
+<body> 
+	<div ng-controller='myCtrl'>
+		<h3>Using ng-bind</h3>
+		<p ng-bind="name"></p>
+		<h3>Using ng-model</h3>
+		<input  ng-model="fName"></p>
+		<h3>Two way data-binding</h3>
+		<input ng-model="fullName">
+		<p>Entered Full Name :{{fullName}}</p><hr>
+		<h3>Controller example</h3>
+		
+		<span>{{firstName}}</span><button ng-click='changeName()'>change</button>
+		<p>click on the button to change the name</p>
+	</div>
+</body>
+</html>
+
+
