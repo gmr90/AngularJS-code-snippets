@@ -1,2 +1,2 @@
 # AngularJS-code-snippets
-example code snippets 
+AngularJS learning code snippets 
