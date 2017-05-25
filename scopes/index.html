@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>angular-1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script  src="script.js"></script>
+</head>
+<body> 
+
+		<p> root's scope favourite color</p>
+		<h4>Color is {{color}}</h4>
+
+		<div ng-controller="myCtrl">
+		<p>The scope of the controller's color</p>
+		<h4>Color is {{color}}</h4>
+				<ul>
+					<li ng-repeat="x in names">
+						{{x}}
+					</li>
+				</ul>
+		</div>
+
+		<p> root's scope favourite color after controller div section</p>
+		<h4>Color is {{color}}</h4>
+</body>
+</html>
+
+
