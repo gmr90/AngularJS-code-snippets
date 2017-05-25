@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>angular-1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script  src="script.js"></script>
+	<style type="text/css">
+		input.ng-invalid{
+			background-color:lightblue;
+		}
+
+	</style>
+</head>
+<body> 
+	
+	<div ng-controller="myCtrl">
+		Name : <input  ng-model="name">
+		<h3>Two Way Binding </h3>
+		Comments : <input ng-model = "comments">
+		<p>You have entered : {{comments}}</p>
+
+
+		<h3>Validate User Input</h3>
+		<form name="myForm">
+				<input type="email" name="myEmail" ng-model="text">
+				<span ng-show="myForm.myEmail.$error.email">Not a valid e-mail address</span>	
+				<h4>Status</h4>	
+				<p>Valid:{{ myForm.myEmail.$valid }}(if true, the value meets all criteria)</p>
+				<p>Dirty:{{ myForm.myEmail.$dirty }}(if true, the value has been changed)</p>
+				<p>touched: {{ myForm.myEmail.$touched }}(if true, the field has been in focus) </p>
+				<h3>CSS Classes</h3>
+				<input name="myName" ng-model="myText" required>
+		</form>
+		
+		
+	</div>
+
+	<!-- The ng-model directive binds the value of HTML controls (input, select, textarea) to application data. -->
+		
+
+</body>
+</html>
+
+
