@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+	<title>directive example</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+	<div  ng-init="firstName='govi' ">
+		<p>Enter something in the input box</p>
+		Name : <input type="text" ng-model="firstName"><br><br>
+		You wrote : {{firstName}}
+	</div>
+	<h2>Data Binding Example</h2>
+	<div ng-init="quantity=1;price=10;names=['mike','lara','zine'] ">
+		Quantity:<input type="number" ng-model='quantity'>
+		Price:<input type="number" ng-model='price'><br>
+		Total in dollars : {{quantity * price }}	
+		<h2>The ng-repeat directive repeats an HTML element:</h2>
+		<ul>
+			<li ng-repeat="x in names">
+				{{ x }}
+			</li>
+		</ul>
+
+	</div>
+	<div>
+		<h2>Create a New Directive</h2>
+		<h5>Invoke a directive by using the Element Name </h5>
+		<test-directive></test-directive>
+		<h5>Invoke a directive by using the Attribute </h5>
+		<div test-directive></div>
+		<h5>Invoke a directive by using the class</h5>
+		<div class="test-directive"></div>
+		<h5>Invoke a directive by using the comment</h5>
+		<!-- directive: test-directive -->
+
+
+
+	</div>
+	
+
+</body>
+</html>
