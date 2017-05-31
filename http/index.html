@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>angular-1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script  src="script.js"></script>
+</head>
+<body> 
+	<div ng-controller="myCtrl">
+			<h1>{{ myWelcome }}</h1>
+			<p>Config : {{ config }}</p>
+			<p>Status : {{ status }}</p>
+			<p>StatusText : {{ statusText }}</p>
+			<div>
+				<h2> JSON Data Display</h2>
+				<ul>
+					<li ng-repeat="x in myData">
+						{{x.Name+" "+x.Country}}
+					</li>	
+				</ul>
+			</div>	
+	</div>
+</body>
+</html>
+
+
