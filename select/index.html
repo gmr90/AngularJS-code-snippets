@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>angular-1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script  src="script.js"></script>
+</head>
+<body> 
+	<div ng-controller = "myCtrl">
+			<select ng-model ="selectedCars" ng-options = "x.model for x in cars ">
+			</select>
+			<h3>you selected : {{ selectedCars.model }}</h3>
+			<h3>Car Color: {{selectedCars.color}} </h3>
+			<h1>The Data Source as an Object</h1>
+			<select ng-model="selectedCarss" ng-options="y.brand for (x, y) in carss">
+			</select>
+			<h3>You selected Brand: {{ selectedCarss.brand }}</h3>
+			<h3>You selected Model : {{ selectedCarss.model }}</h3>
+			<h3>You selected Color : {{ selectedCarss.color }}</h3>
+	</div>	
+	<p>This example shows how to fill a dropdown list using the ng-options directive.</p>
+</body>
+</html>
+
+
