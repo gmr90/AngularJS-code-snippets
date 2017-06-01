@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>angular-1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script  src="script.js"></script>
+</head>
+<body> 
+	<div ng-controller = "myCtrl">
+		<h3>The ng-mousemove directive </h3>
+		<p ng-mousemove= " count= count+1 " > Move over me </p>
+		<p> No. of mouse move overs {{count}} </p>
+		<h3>The ng-click directive </h3>
+		<button ng-click="myFunction()">click me </button>
+		<p>{{count1}}</p>
+
+		<button ng-click="myFunc()">Click Me </button>
+		<div ng-show="showMe">
+			<h1>Hi</h1>	
+			<h2>Hello</h2>
+			<h3>Welcome to Angular JS</h3>
+			<h4>Welcome to Angular JS</h4>
+		</div>
+		<h3>$event Object</h3>
+		<p ng-mousemove="myFunc1($event)">Mouse over me </p>
+		<p>co-ordinates {{x+"       "+y}}</p>
+	</div>	
+</body>
+</html>
+
+
